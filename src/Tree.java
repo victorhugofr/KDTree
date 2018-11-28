@@ -115,7 +115,7 @@ public class Tree {
 	            res = leftMin;
 	        return res;
 	    }
-	    public void print(Node node){
+	    private void print(Node node){
 	        if(node!=null){
 	        	print(node.left);
 	            if(node.left!=null || node.right!=null){
@@ -135,6 +135,9 @@ public class Tree {
 	            }
 	         print(node.right);
 	        }
+	    }
+	    public void print(){
+	        print(root);
 	    }
 	   
 }

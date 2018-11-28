@@ -11,10 +11,10 @@ public class Main {
     	tree.insert(node1);
     	tree.insert(node2);
     	tree.insert(node3);
-    	tree.print(node1);
+    	tree.print();
     	System.out.println(tree.search(node1)); 	
     	tree.delete(node1);
-    	tree.print(node1);
+    	tree.print();
     	 
     }
 
