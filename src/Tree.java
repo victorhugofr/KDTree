@@ -6,9 +6,8 @@ public class Tree {
 	    public Tree() {
 	        
 	    }
-
-	    public boolean isEmpty() {
-	        return root == null;
+	    public Tree(Node t) {
+	        root = t;
 	    }
 
 	    public boolean insert(Node t) {
@@ -42,17 +41,16 @@ public class Tree {
 	    }
 
 	    public boolean search(Node t) {
-	        
-	        int currDim = 0;
+	        int aux = 0;
 	        Node currNode = root;
 	        while (currNode != null) {
 	            if (currNode.equals(t))
 	                return true;//ou return currRoot;
-	            if (t.point[currDim] < currNode.point[currDim])
+	            if (t.point[aux] < currNode.point[aux])
 	                currNode = currNode.left;
 	            else
 	                currNode = currNode.right;
-	            currDim = (currDim + 1) % 2;
+	            aux = (aux + 1) % 2;
 	        }
 	        return false;
 	    }

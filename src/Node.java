@@ -19,8 +19,4 @@ public class Node {
         }
         return true;
     }
-
-    public boolean isLeaf() {
-        return left == null && right == null;
-    }
 }
